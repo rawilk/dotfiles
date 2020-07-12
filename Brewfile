@@ -9,6 +9,7 @@ tap 'homebrew/bundle'
 brew 'ack'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'composer'
 brew 'doctl'
 brew 'httpie'
 brew 'hub'
