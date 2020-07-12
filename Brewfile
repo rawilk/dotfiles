@@ -18,6 +18,7 @@ brew 'mas' # Mac App Store manager
 brew 'ncdu'
 brew 'pkg-config'
 brew 'svn'
+brew 'wget'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
