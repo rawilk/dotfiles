@@ -20,3 +20,9 @@ git clone git@github.com:rawilk/dotfiles.git .dotfiles
 cd .dotfiles
 ./bootstrap
 ```
+
+## Credits
+Inspiration for these dotfiles taken from:
+
+- [Dries Vints Dot Files](https://github.com/driesvints/dotfiles)
+- [Freek Murze Dot Files](https://github.com/freekmurze/dotfiles)
