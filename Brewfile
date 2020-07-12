@@ -6,25 +6,21 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
 # Binaries
-brew 'awscli'
+brew 'ack'
 brew 'bash' # Latest Bash version
-brew 'bat' # "cat" on steroids
 brew 'coreutils' # Those that come with macOS are outdated
-brew 'ffmpeg'
-brew 'gh'
-brew 'git'
-brew 'gnupg2'
-brew 'grep'
+brew 'doctl'
 brew 'httpie'
 brew 'hub'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
-brew 'stripe'
+brew 'ncdu'
+brew 'pkg-config'
 brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
+brew 'zsh-autosuggestions'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -37,7 +33,8 @@ brew 'gifsicle'
 brew 'php'
 brew 'php@7.3'
 brew 'php@7.2'
-brew 'composer'
+brew 'php@7.1'
+brew 'php@7.0'
 brew 'imagemagick'
 brew 'libmemcached'
 brew 'memcached'
@@ -46,29 +43,22 @@ brew 'nginx'
 brew 'node'
 brew 'redis'
 brew 'yarn'
+brew 'ghostscript'
 
 # Apps
-cask 'lastpass'
 cask 'alfred'
 cask 'bartender'
-cask 'dbngin'
-cask 'discord'
 cask 'firefox'
 cask 'google-chrome'
 cask 'gpg-suite'
-cask 'imageoptim'
 cask 'jetbrains-toolbox'
+cask 'lastpass'
 cask 'phpstorm'
-cask 'tableplus'
-#cask 'telegram-desktop'
-cask 'the-unarchiver'
-cask 'tinkerwell'
 cask 'spotify'
+cask 'tableplus'
 cask 'termius'
-#cask 'transmit'
-#cask 'vagrant'
-#cask 'virtualbox' # Might need to allow access in Security settings
-#cask 'virtualbox-extension-pack'
+cask 'tinkerwell'
+cask 'transmit'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -76,6 +66,8 @@ cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'quicklook-csv'
 cask 'qlstephen'
+cask 'suspicious-package'
+cask 'webp-quicklook'
 
 # Fonts
 cask 'font-lato'

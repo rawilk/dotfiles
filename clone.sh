@@ -1,12 +1,24 @@
 #!/bin/sh
 
-echo "Cloning repositories..."
+# Create our code directories
+echo 'Creating development directories...'
+echo '-----------------------------------'
+mkdir $HOME/dev
+mkdir $HOME/dev/code
+mkdir $HOME/dev/code/personal
+mkdir $HOME/dev/code/work
+mkdir $HOME/dev/code/packages
+mkdir $HOME/dev/code/npm
+mkdir $HOME/dev/code/vendor
+
+echo 'Cloning repositories...'
+echo '-----------------------'
 
 CODE=$HOME/dev/code
 PERSONAL=$CODE/personal
 WORK=$CODE/work
-PACKAGES=$CODE/packages
 NPM=$CODE/npm
+PACKAGES=$CODE/packages
 VENDOR=$CODE/vendor
 
 # Personal
@@ -27,3 +39,11 @@ git clone git@github.com:rawilk/vue-context-docs.git $NPM/vue-context-docs
 # Vendor Repos
 git clone git@github.com:envault/envault.git $VENDOR/envault
 git clone git@github.com:livewire/surge.git $VENDOR/surge
+
+unset CODE
+unset PERSONAL
+unset WORK
+unset NPM
+unset PACKAGES
+unset VENDOR
+
