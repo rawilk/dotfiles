@@ -25,6 +25,7 @@ VENDOR=$CODE/vendor
 git clone git@github.com:rawilk/randallwilk.dev.git $PERSONAL/randallwilk.dev
 
 # Work
+git clone git@github.com:cybrix-solutions/rite.git $WORK/rite
 git clone git@github.com/rawilk/rite-v3.git $WORK/rite-v3
 
 # Packages
@@ -39,11 +40,4 @@ git clone git@github.com:rawilk/vue-context-docs.git $NPM/vue-context-docs
 # Vendor Repos
 git clone git@github.com:envault/envault.git $VENDOR/envault
 git clone git@github.com:livewire/surge.git $VENDOR/surge
-
-unset CODE
-unset PERSONAL
-unset WORK
-unset NPM
-unset PACKAGES
-unset VENDOR
 
