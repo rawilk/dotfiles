@@ -23,7 +23,7 @@ cd .dotfiles
 ./fresh.sh
 ```
 
-![screenshot](https://github.com/rawilk/dotfiles/tree/master/docs/screenshot.png)
+![screenshot](https://github.com/rawilk/dotfiles/blob/master/docs/screenshot.png)
 
 ## Credits
 Inspiration for these dotfiles taken from:
