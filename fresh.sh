@@ -47,10 +47,6 @@ fi
 # Install Homebrew recipes
 brew update
 
-echo 'Install wget'
-echo '------------'
-brew install wget --overwrite
-
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle

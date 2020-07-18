@@ -9,6 +9,7 @@ tap 'homebrew/bundle'
 brew 'ack'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'composer'
 brew 'doctl'
 brew 'httpie'
 brew 'hub'
@@ -17,6 +18,7 @@ brew 'mas' # Mac App Store manager
 brew 'ncdu'
 brew 'pkg-config'
 brew 'svn'
+brew 'wget'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
@@ -49,6 +51,7 @@ cask 'bartender'
 cask 'firefox'
 cask 'google-chrome'
 cask 'gpg-suite'
+cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'lastpass'
 #cask 'phpstorm'
