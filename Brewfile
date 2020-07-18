@@ -22,7 +22,7 @@ brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
 brew 'zsh-autosuggestions'
 
-# Spatie Medialibrary
+# Spatie Media Library
 brew 'jpegoptim'
 brew 'optipng'
 brew 'pngquant'
@@ -33,12 +33,10 @@ brew 'gifsicle'
 brew 'php'
 brew 'php@7.3'
 brew 'php@7.2'
-brew 'php@7.1'
-brew 'php@7.0'
 brew 'imagemagick'
 brew 'libmemcached'
 brew 'memcached'
-brew 'mysql'
+brew 'mariadb'
 brew 'nginx'
 brew 'node'
 brew 'redis'
@@ -53,12 +51,13 @@ cask 'google-chrome'
 cask 'gpg-suite'
 cask 'jetbrains-toolbox'
 cask 'lastpass'
-cask 'phpstorm'
+#cask 'phpstorm'
 cask 'spotify'
-cask 'tableplus'
 cask 'termius'
 cask 'tinkerwell'
 cask 'transmit'
+cask 'microsoft-word'
+cask 'microsoft-excel'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -80,4 +79,6 @@ cask 'font-source-serif-pro'
 
 # Mac App Store
 #mas 'Byword', id: 420212497
+mas 'PDF Reader', id: 1185380569
+mas 'Messenger', id: 1480068668
 mas 'Spark', id: 1176895641
