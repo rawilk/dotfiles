@@ -2,10 +2,8 @@
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
 alias a="php artisan"
-alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
-alias ci="composer install"
 alias cda="composer dump-autoload -o"
 alias hostfile="sudo nano /etc/hosts"
 alias mfs="php artisan migrate:fresh --seed"
@@ -16,6 +14,7 @@ alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 
 # Git
 alias gc="git checkout"
+alias gp="git pull"
 alias gpo="git push origin"
 alias gm="git merge"
 
@@ -54,3 +53,17 @@ alias c="clear"
 
 # JavaScript
 alias watch="npm run watch"
+
+# SSH Aliases
+alias ssh-randallwilk="ssh forge@192.241.139.122"
+alias ssh-rite="ssh forge@192.241.154.199"
+alias ssh-cybrix="ssh forge@157.245.80.104"
+
+# Directory Switching
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias home="cd ~"
+alias personal="cd ~/dev/code/personal"
+alias work="cd ~/dev/code/work"
+alias packages="cd ~/dev/code/packages"

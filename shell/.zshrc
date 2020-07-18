@@ -1,3 +1,5 @@
+ZSH_DISABLE_COMPFIX="true"
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -15,7 +17,7 @@ DEFAULT_USER=`whoami`
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git laravel4 laravel5 composer osx vagrant)
+plugins=(git composer osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,10 +56,6 @@ for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 
-#for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
-	#[ -r "$file" ] && [ -f "$file" ] && source "$file"
-#done
-
 unset file
 
 # Load rvm
@@ -91,5 +89,5 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="/usr/local/opt/mariadb/bin:$PATH"
+export PATH="/usr/local/opt/node/bin:$PATH"export PATH="/usr/local/sbin:$PATH"
