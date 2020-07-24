@@ -63,6 +63,10 @@ echo 'Install xdebug'
 echo '--------------'
 pecl install xdebug
 
+echo 'Install pcov'
+echo '------------'
+pecl install pcov
+
 echo 'Install phpunit-watcher'
 echo '-----------------------'
 composer global require spatie/phpunit-watcher
@@ -86,7 +90,7 @@ echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
 echo 'Things to do to make the agnoster terminal theme work:'
-echo '1. Install menlo patched font included in ~/.dotfiles/misc https://gist.github.com/qrush/1595572/raw/Menlo-Powerline.otf'
+echo '1. Set the font in iTerm to Source Code Pro for Powerline'
 echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
 
 echo '++++++++++++++++++++++++++++++'

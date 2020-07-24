@@ -50,26 +50,24 @@ cask 'alfred'
 cask 'bartender'
 cask 'firefox'
 cask 'google-chrome'
+cask 'google-backup-and-sync'
 cask 'gpg-suite'
 cask 'iterm2'
-cask 'lastpass'
 cask 'phpstorm'
 cask 'datagrip'
 cask 'spotify'
 cask 'termius'
 cask 'tinkerwell'
 cask 'transmit'
-cask 'microsoft-word'
-cask 'microsoft-excel'
 
 # Quicklook
-cask 'qlcolorcode'
+cask 'qlcolorcode' # syntax highlighting
 cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'quicklook-csv'
-cask 'qlstephen'
+cask 'qlstephen' # plain text files without a file extension
 cask 'suspicious-package'
-cask 'webp-quicklook'
+cask 'webpquicklook'
 
 # Fonts
 cask 'font-lato'
@@ -81,7 +79,11 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
-#mas 'Byword', id: 420212497
-mas 'PDF Reader', id: 1185380569
+mas 'HP Smart', id: 1474276998
+mas 'LastPass', id: 926036361
 mas 'Messenger', id: 1480068668
+mas 'Microsoft Word', id: 462054704
+mas 'Microsoft Excel', id: 462058435
+mas 'PDF Reader', id: 1185380569
 mas 'Spark', id: 1176895641
+mas 'The Unarchiver', id: 425424353

@@ -25,12 +25,14 @@ VENDOR=$CODE/vendor
 git clone git@github.com:rawilk/randallwilk.dev.git $PERSONAL/randallwilk.dev
 
 # Work
+git clone git@github.com:cybrix-solutions/cybrixsolutions.com.git $WORK/cybrixsolutions.com
 git clone git@github.com:cybrix-solutions/rite.git $WORK/rite
 git clone git@github.com/rawilk/rite-v3.git $WORK/rite-v3
 
 # Packages
 git clone git@github.com:rawilk/laravel-printing.git $PACKAGES/laravel-printing
 git clone git@github.com:rawilk/shipper.git $PACKAGES/shipper
+git clone git@github.com:rawilk/laravel-app-key-rotator.git $PACKAGES/laravel-app-key-rotator
 git clone git@github.com/rawilk/package-skeleton-laravel.git $PACKAGES/package-skeleton-laravel
 
 # NPM Packages
