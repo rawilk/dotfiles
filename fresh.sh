@@ -49,6 +49,7 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
+cd $HOME/.dotfiles
 brew bundle
 
 echo 'Install imagick'
