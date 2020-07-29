@@ -71,6 +71,7 @@ cask 'webpquicklook'
 # Fonts
 cask 'font-lato'
 cask 'font-open-sans'
+cask 'font-poppins'
 cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
