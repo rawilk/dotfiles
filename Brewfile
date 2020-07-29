@@ -56,7 +56,6 @@ cask 'iterm2'
 cask 'phpstorm'
 cask 'datagrip'
 cask 'spotify'
-cask 'termius'
 cask 'tinkerwell'
 cask 'transmit'
 
