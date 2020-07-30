@@ -48,6 +48,7 @@ brew 'ghostscript'
 # Apps
 cask 'alfred'
 cask 'bartender'
+cask 'caffeine'
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-backup-and-sync'
