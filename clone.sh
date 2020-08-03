@@ -33,6 +33,7 @@ git clone git@github.com/rawilk/rite-v3.git $WORK/rite-v3
 git clone git@github.com:rawilk/laravel-printing.git $PACKAGES/laravel-printing
 git clone git@github.com:rawilk/shipper.git $PACKAGES/shipper
 git clone git@github.com:rawilk/laravel-app-key-rotator.git $PACKAGES/laravel-app-key-rotator
+git clone git@github.com/rawilk/laravel-settings.git $PACKAGES/laravel-settings
 git clone git@github.com/rawilk/package-skeleton-laravel.git $PACKAGES/package-skeleton-laravel
 
 # NPM Packages
