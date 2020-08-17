@@ -67,3 +67,6 @@ alias home="cd ~"
 alias personal="cd ~/dev/code/personal"
 alias work="cd ~/dev/code/work"
 alias packages="cd ~/dev/code/packages"
+
+# Script aliases
+alias startwork="~/.dotfiles/work.sh"
