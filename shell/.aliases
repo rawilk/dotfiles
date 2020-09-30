@@ -4,6 +4,8 @@ alias phpunitw="phpunit-watcher watch"
 alias a="php artisan"
 alias cu="composer update"
 alias cr="composer require"
+# Composer require with unlimited memory
+alias cru="COMPOSER_MEMORY_LIMIT=-1 composer require"
 alias cda="composer dump-autoload -o"
 alias hostfile="sudo nano /etc/hosts"
 alias mfs="php artisan migrate:fresh --seed"
