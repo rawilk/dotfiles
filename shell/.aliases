@@ -4,8 +4,7 @@ alias phpunitw="phpunit-watcher watch"
 alias a="php artisan"
 alias cu="composer update"
 alias cr="composer require"
-# Composer require with unlimited memory
-alias cru="COMPOSER_MEMORY_LIMIT=-1 composer require"
+alias crm="composer remove"
 alias cda="composer dump-autoload -o"
 alias hostfile="sudo nano /etc/hosts"
 alias mfs="php artisan migrate:fresh --seed"
@@ -13,6 +12,11 @@ alias p="phpunit"
 alias pf="phpunit --filter "
 alias sshconfig="nano ~/.ssh/config"
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+
+# Composer Unlimited Memory Commands...
+alias cru="COMPOSER_MEMORY_LIMIT=-1 composer require"
+alias cuu="COMPOSER_MEMORY_LIMIT=-1 composer update"
+alias crmu="COMPOSER_MEMORY_LIMIT=-1 composer remove"
 
 # Git
 alias gc="git checkout"
