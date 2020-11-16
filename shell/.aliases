@@ -5,6 +5,7 @@ alias a="php artisan"
 alias cu="composer update"
 alias cr="composer require"
 alias crm="composer remove"
+alias cfresh="rm -rf vendor/ composer.lock && composer i"
 alias cda="composer dump-autoload -o"
 alias hostfile="sudo nano /etc/hosts"
 alias mfs="php artisan migrate:fresh --seed"
@@ -59,6 +60,7 @@ alias c="clear"
 
 # JavaScript
 alias watch="npm run watch"
+alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 
 # SSH Aliases
 alias ssh-randallwilk="ssh forge@192.241.139.122"
