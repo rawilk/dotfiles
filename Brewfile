@@ -52,7 +52,7 @@ cask 'daisydisk'
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-backup-and-sync'
-cask 'gpg-suite'
+# cask 'gpg-suite' # Not supported on Big Sur yet
 cask 'iterm2'
 cask 'phpstorm'
 cask 'datagrip'
