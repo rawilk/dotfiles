@@ -89,6 +89,12 @@ valet install
 # Install Powerline Patched Fonts
 ./install-fonts.sh
 
+# Start all services
+brew services run --all
+
+# Set root mysql password
+mysqladmin -u root -p password
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
