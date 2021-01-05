@@ -64,7 +64,7 @@ pecl install memcached
 
 echo 'Install xdebug'
 echo '--------------'
-pecl install xdebug
+# pecl install xdebug
 
 echo 'Install pcov'
 echo '------------'
