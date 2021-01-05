@@ -45,6 +45,7 @@ brew 'ghostscript'
 
 # Apps
 cask 'alfred'
+cask 'babeledit' # Language file editor
 cask 'bartender'
 cask 'caffeine'
 cask 'daisydisk'
