@@ -56,6 +56,7 @@ cask 'google-backup-and-sync'
 cask 'iterm2'
 cask 'phpstorm'
 cask 'datagrip'
+cask 'ray' # spatie debug tool
 cask 'spotify'
 cask 'tinkerwell'
 cask 'transmit'
