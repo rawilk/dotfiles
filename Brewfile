@@ -60,6 +60,7 @@ cask 'ray' # spatie debug tool
 cask 'spotify'
 cask 'tinkerwell'
 cask 'transmit'
+cask 'owenvoke/casks/helo' # HELO
 
 # Quicklook
 cask 'qlcolorcode' # syntax highlighting
