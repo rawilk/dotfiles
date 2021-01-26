@@ -63,7 +63,7 @@ alias watch="npm run watch"
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 
 # SSH Aliases
-alias ssh-randallwilk="ssh forge@192.241.139.122"
+alias ssh-randallwilk="ssh forge@68.183.19.101"
 alias ssh-rite="ssh forge@192.241.154.199"
 alias ssh-cybrix="ssh forge@157.245.80.104"
 
