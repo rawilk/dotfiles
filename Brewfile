@@ -44,6 +44,7 @@ brew 'yarn'
 brew 'ghostscript'
 
 # Apps
+cask 'adobe-acrobat-reader'
 cask 'alfred'
 cask 'babeledit' # Language file editor
 cask 'bartender'
@@ -87,6 +88,5 @@ mas 'LastPass', id: 926036361
 mas 'Messenger', id: 1480068668
 mas 'Microsoft Word', id: 462054704
 mas 'Microsoft Excel', id: 462058435
-mas 'PDF Reader', id: 1185380569
 mas 'Spark', id: 1176895641
 mas 'The Unarchiver', id: 425424353
