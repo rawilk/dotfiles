@@ -66,6 +66,9 @@ alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias ssh-randallwilk="ssh forge@68.183.19.101"
 alias ssh-rite="ssh forge@192.241.154.199"
 alias ssh-cybrix="ssh forge@157.245.80.104"
+alias ssh-mha="ssh forge@165.227.198.189"
+alias ssh-hamptonbays="ssh forge@161.35.121.245"
+alias ssh-arch="ssh forge@157.245.138.236"
 
 # Directory Switching
 alias ..="cd .."
