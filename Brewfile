@@ -3,12 +3,13 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'nicoverbruggen/homebrew-cask' # PHP monitor
+tap 'stripe/stripe-cli'
 
 # Binaries
 brew 'ack'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
-brew 'composer'
 brew 'doctl'
 brew 'httpie'
 brew 'hub'
@@ -16,7 +17,9 @@ brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'ncdu'
 brew 'pkg-config'
-brew 'svn'
+brew 'stripe/stripe-cli/stripe'
+brew 'stripe/stripe-mock/stripe-mock'
+brew 'svn' # Needed to install fonts
 brew 'wget'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
@@ -32,9 +35,12 @@ brew 'gifsicle'
 
 # Development
 brew 'php'
+brew 'php@8.0'
 brew 'php@7.4'
+brew 'composer'
 brew 'imagemagick'
 brew 'libmemcached'
+brew 'meilisearch'
 brew 'memcached'
 brew 'mariadb'
 brew 'nginx'
@@ -44,6 +50,7 @@ brew 'yarn'
 brew 'ghostscript'
 
 # Apps
+cask '1password'
 cask 'adobe-acrobat-reader'
 cask 'alfred'
 cask 'babeledit' # Language file editor
@@ -53,24 +60,21 @@ cask 'daisydisk'
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-backup-and-sync'
-# cask 'gpg-suite' # Not supported on Big Sur yet
 cask 'iterm2'
 cask 'phpstorm'
 cask 'datagrip'
+cask 'google-chat'
 cask 'ray' # spatie debug tool
-cask 'spotify'
+cask 'responsively' # Responsive dev app
+# cask 'spotify'
 cask 'tinkerwell'
 cask 'transmit'
 cask 'owenvoke/casks/helo' # HELO
+cask 'zoom'
 
 # Quicklook
-cask 'qlcolorcode' # syntax highlighting
 cask 'qlmarkdown'
 cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen' # plain text files without a file extension
-cask 'suspicious-package'
-cask 'webpquicklook'
 
 # Fonts
 cask 'font-lato'
@@ -83,10 +87,11 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
+mas 'ColorSlurp', id: 1287239339 # Color picker
 mas 'HP Smart', id: 1474276998
-mas 'LastPass', id: 926036361
 mas 'Messenger', id: 1480068668
 mas 'Microsoft Word', id: 462054704
 mas 'Microsoft Excel', id: 462058435
+mas 'Petrify', id: 1451177988 # Code screenshot tool
 mas 'Spark', id: 1176895641
 mas 'The Unarchiver', id: 425424353

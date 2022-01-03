@@ -5,18 +5,20 @@ echo 'Setting up your Mac...'
 # Hide "last login" line when starting a new terminal session
 touch $HOME/.hushlogin
 
-# Install zsh
-echo 'Install oh-my-zsh'
-echo '-----------------'
-rm -rf $HOME/.oh-my-zsh
-curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+# Check for Oh My Zsh and install if we don't have it
+if test ! $(which omz); then
+  echo 'Install oh-my-zsh'
+  echo '-----------------'
+
+  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+fi
 
 # Add global gitignore
 ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
 git config --global core.excludesfile $HOME/.global-gitignore
 
 # Symlink zsh preferences
-rm $HOME/.zshrc
+rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 
 # Symlink vim prefs
@@ -36,14 +38,15 @@ git checkout d6a36b1 agnoster.zsh-theme
 cd ~/.dotfiles/shell
 chmod +x z.sh
 
-# Homebrew
-echo 'Install homebrew'
-echo '----------------'
-
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-    sudo rm -rf /usr/local/Cellar /usr/local/.git
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  echo 'Install homebrew'
+  echo '----------------'
+
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Install Homebrew recipes
@@ -51,49 +54,10 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-cd $HOME/.dotfiles
-brew bundle
+brew bundle --file $DOTFILES/Brewfile
 
-echo 'Install imagick'
-echo '---------------'
-pecl install imagick
-
-echo 'Install memcached'
-echo '-----------------'
-pecl install memcached
-
-echo 'Install xdebug'
-echo '--------------'
-# pecl install xdebug
-
-echo 'Install pcov'
-echo '------------'
-pecl install pcov
-
-echo 'Install phpunit-watcher'
-echo '-----------------------'
-composer global require spatie/phpunit-watcher
-
-echo 'Install laravel global installer'
-echo '--------------------------------'
-composer global require laravel/installer
-
-echo 'Install laravel valet'
-echo '---------------------'
-composer global require laravel/valet
-valet install
-
-# Create dev directories and clone git repos
-./clone.sh
-
-# Install Powerline Patched Fonts
-./install-fonts.sh
-
-# Start all services
-brew services run --all
-
-# Set root mysql password
-mysqladmin -u root -p password
+# Setup dev environment
+$DOTFILES/dev.sh
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'

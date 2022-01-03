@@ -1,7 +1,10 @@
+# Path to your dotfiles
+export DOTFILES=$HOME/.dotfiles
+
 ZSH_DISABLE_COMPFIX="true"
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_CUSTOM=$HOME/.dotfiles/misc/oh-my-zsh-custom
 
@@ -91,3 +94,4 @@ export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="/usr/local/opt/mariadb/bin:$PATH"
 export PATH="/usr/local/opt/node/bin:$PATH"export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"

@@ -30,6 +30,7 @@ git clone git@github.com:cybrix-solutions/rite.git $WORK/rite
 git clone git@github.com:cybrix-solutions/rite-v3.git $WORK/rite-v3
 
 # Packages
+git clone git@github.com:rawilk/laravel-base.git $PACKAGES/laravel-base
 git clone git@github.com:rawilk/laravel-printing.git $PACKAGES/laravel-printing
 git clone git@github.com:rawilk/laravel-app-key-rotator.git $PACKAGES/laravel-app-key-rotator
 git clone git@github.com:rawilk/laravel-settings.git $PACKAGES/laravel-settings
@@ -40,9 +41,9 @@ git clone git@github.com:rawilk/laravel-form-components.git $PACAKGES/laravel-fo
 git clone git@github.com:rawilk/package-skeleton-laravel.git $PACKAGES/package-skeleton-laravel
 
 # NPM Packages
-git clone git@github.com:rawilk/vue-context.git $NPM/vue-context
+# git clone git@github.com:rawilk/vue-context.git $NPM/vue-context
 
 # Vendor Repos
 git clone git@github.com:envault/envault.git $VENDOR/envault
 git clone git@github.com:livewire/surge.git $VENDOR/surge
-git clone git@github.com:spatie/laravel-backup-server $VENDORE/laravel-backup-server
+# git clone git@github.com:spatie/laravel-backup-server $VENDOR/laravel-backup-server

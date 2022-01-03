@@ -12,7 +12,7 @@ alias mfs="php artisan migrate:fresh --seed"
 alias p="phpunit"
 alias pf="phpunit --filter "
 alias sshconfig="nano ~/.ssh/config"
-alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias copyssh="pbcopy < $HOME/.ssh/id_ed255519.pub"
 
 # Composer Unlimited Memory Commands...
 alias cru="COMPOSER_MEMORY_LIMIT=-1 composer require"
@@ -33,6 +33,10 @@ alias l="ls -laF"
 
 # PhpStorm
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+
+# PHP
+alias switch-php81="brew unlink php@8.0 && brew link --overwrite --force php"
+alias switch-php80="brew unlink php && brew link --overwrite --force php@8.0"
 
 # Redis
 alias flush-redis="redis-cli FLUSHALL"
