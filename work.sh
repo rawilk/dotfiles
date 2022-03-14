@@ -4,7 +4,7 @@
 open -a "Google Chrome.app" https://resi-rite.test
 
 # other apps
-open -a "Music.app"
+open -a "Spotify.app"
 open -a "Spark.app" # email
 open -a "BabelEdit.app"
 

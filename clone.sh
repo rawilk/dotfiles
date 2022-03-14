@@ -44,6 +44,6 @@ git clone git@github.com:rawilk/package-skeleton-laravel.git $PACKAGES/package-s
 # git clone git@github.com:rawilk/vue-context.git $NPM/vue-context
 
 # Vendor Repos
-git clone git@github.com:envault/envault.git $VENDOR/envault
-git clone git@github.com:livewire/surge.git $VENDOR/surge
+# git clone git@github.com:envault/envault.git $VENDOR/envault
+# git clone git@github.com:livewire/surge.git $VENDOR/surge
 # git clone git@github.com:spatie/laravel-backup-server $VENDOR/laravel-backup-server

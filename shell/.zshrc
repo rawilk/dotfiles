@@ -92,6 +92,8 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="/usr/local/opt/mariadb/bin:$PATH"
-export PATH="/usr/local/opt/node/bin:$PATH"export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/opt/mariadb/bin:$PATH"
+export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"

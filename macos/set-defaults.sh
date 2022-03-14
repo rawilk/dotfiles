@@ -16,6 +16,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "MacBook Randall"
+sudo scutil --set HostName "MacBook Randall"
+sudo scutil --set LocalHostName "MacBook Randall"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook Randall"
+
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
@@ -40,10 +46,10 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable Resume system-wide
-defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+# defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+# defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
@@ -51,9 +57,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-# Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
@@ -70,13 +73,7 @@ sudo pmset -a sms 0
 ###############################################################################
 
 # Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -97,15 +94,50 @@ systemsetup -settimezone "America/Chicago" > /dev/null
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+###############################################################################
+# Energy saving                                                               #
+###############################################################################
+
+# Enable lid wakeup
+sudo pmset -a lidwake 1
+
+# Restart automatically on power loss
+sudo pmset -a autorestart 1
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# Sleep the display after 15 minutes
+sudo pmset -a displaysleep 15
+
+# Disable machine sleep while charging
+sudo pmset -c sleep 0
+
+# Set machine sleep to 5 minutes on battery
+sudo pmset -b sleep 5
+
+# Set standby delay to 24 hours (default is 1 hour)
+sudo pmset -a standbydelay 86400
+
+# Never go into computer sleep mode
+sudo systemsetup -setcomputersleep Off > /dev/null
 
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
 
+# Re-enable subpixel antialiasing
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
+
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Enable subpixel font rendering on non-Apple LCDs
+# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 ###############################################################################
 # Finder                                                                      #
@@ -122,9 +154,6 @@ defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
-# Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
@@ -139,6 +168,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Disable disk image verification
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
@@ -165,6 +195,20 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true
 
+# Show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -181,7 +225,10 @@ defaults write com.apple.dock show-process-indicators -bool false
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-defaults write com.apple.dock persistent-apps -array ""
+defaults write com.apple.dock persistent-apps -array
+
+# Show only open applications in the Dock
+defaults write com.apple.dock static-only -bool true
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
@@ -195,9 +242,22 @@ defaults write com.apple.dock mru-spaces -bool false
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
+
+# Privacy: don’t send search queries to Apple
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+# Show the full URL in the address bar (note: this still hides the scheme)
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 # Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -207,11 +267,11 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+# Warn about fraudulent websites
+defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+# Update extensions automatically
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -242,22 +302,88 @@ defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 ###############################################################################
+# iTerm 2                                                                     #
+###############################################################################
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+###############################################################################
+# Time Machine                                                                #
+###############################################################################
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+###############################################################################
+# Mac App Store                                                               #
+###############################################################################
+
+# Enable the WebKit Developer Tools in the Mac App Store
+defaults write com.apple.appstore WebKitDeveloperExtras -bool true
+
+# Enable the automatic update check
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Download newly available updates in background
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+# Install System data files & security updates
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+# Turn on app auto-update
+defaults write com.apple.commerce AutoUpdate -bool true
+
+###############################################################################
+# Photos                                                                      #
+###############################################################################
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+###############################################################################
 # Messages                                                                    #
 ###############################################################################
 
 # Disable smart quotes as it’s annoying for messages that contain code
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
-# Disable continuous spell checking
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+###############################################################################
+# Google Chrome & Google Chrome Canary                                        #
+###############################################################################
+
+# Expand the print dialog by default
+defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
+defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-	"Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
-	"Terminal" "Twitter" "iCal"; do
-	killall "${app}" > /dev/null 2>&1
+for app in "Activity Monitor" \
+    "Address Book" \
+    "Calendar" \
+    "cfprefsd" \
+    "Contacts" \
+    "Dock" \
+    "Finder" \
+    "Google Chrome" \
+    "Mail" \
+    "Messages" \
+    "Photos" \
+    "Safari" \
+    "SizeUp" \
+    "Spectacle" \
+    "SystemUIServer" \
+    "Terminal" \
+    "iCal"; do
+    killall "${app}" &> /dev/null
 done
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."

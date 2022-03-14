@@ -42,7 +42,7 @@ brew 'imagemagick'
 brew 'libmemcached'
 brew 'meilisearch'
 brew 'memcached'
-brew 'mariadb'
+brew 'mysql'
 brew 'nginx'
 brew 'node'
 brew 'redis'
@@ -66,7 +66,7 @@ cask 'datagrip'
 cask 'google-chat'
 cask 'ray' # spatie debug tool
 cask 'responsively' # Responsive dev app
-# cask 'spotify'
+cask 'spotify'
 cask 'tinkerwell'
 cask 'transmit'
 cask 'owenvoke/casks/helo' # HELO

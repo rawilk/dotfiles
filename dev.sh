@@ -30,6 +30,13 @@ echo '---------------------'
 composer global require laravel/valet
 valet install
 
+# Configure NPM
+echo 'Configure NPM'
+echo '-------------'
+# Create a directory for global packages and tell npm where to store globally installed packages
+mkdir "${HOME}/.npm-packages"
+npm config set prefix "${HOME}/.npm-packages"
+
 # Create dev directories and clone git repos
 $DOTFILES/clone.sh
 
