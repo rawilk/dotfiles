@@ -62,8 +62,9 @@ cask 'google-chrome'
 cask 'google-backup-and-sync'
 cask 'gpg-suite'
 cask 'iterm2'
-cask 'phpstorm'
-cask 'datagrip'
+cask 'jetbrains-toolbox'
+# cask 'phpstorm'
+# cask 'datagrip'
 cask 'google-chat'
 cask 'ray' # spatie debug tool
 cask 'responsively' # Responsive dev app
