@@ -66,6 +66,7 @@ cask 'jetbrains-toolbox'
 # cask 'phpstorm'
 # cask 'datagrip'
 cask 'google-chat'
+cask 'phpmon'
 cask 'ray' # spatie debug tool
 cask 'responsively' # Responsive dev app
 cask 'spotify'
