@@ -54,10 +54,10 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle --file $DOTFILES/Brewfile
+brew bundle --file $HOME/.dotfiles/Brewfile
 
 # Setup dev environment
-$DOTFILES/dev.sh
+$HOME/.dotfiles/dev.sh
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
