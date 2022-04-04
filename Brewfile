@@ -76,7 +76,6 @@ cask 'owenvoke/casks/helo' # HELO
 cask 'zoom'
 
 # Quicklook
-cask 'qlmarkdown'
 cask 'quicklook-json'
 
 # Fonts
