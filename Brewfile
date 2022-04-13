@@ -55,16 +55,13 @@ cask 'adobe-acrobat-reader'
 cask 'alfred'
 cask 'babeledit' # Language file editor
 cask 'bartender'
-cask 'caffeine'
 cask 'daisydisk'
 cask 'firefox'
 cask 'google-chrome'
-cask 'google-backup-and-sync'
+# cask 'google-backup-and-sync'
 cask 'gpg-suite'
 cask 'iterm2'
-cask 'jetbrains-toolbox'
-# cask 'phpstorm'
-# cask 'datagrip'
+cask 'jetbrains-toolbox' # Will manage PhpStorm & DataGrip through the toolbox for now on.
 cask 'google-chat'
 cask 'phpmon'
 cask 'ray' # spatie debug tool
@@ -72,7 +69,7 @@ cask 'responsively' # Responsive dev app
 cask 'spotify'
 cask 'tinkerwell'
 cask 'transmit'
-cask 'owenvoke/casks/helo' # HELO
+cask 'helo'
 cask 'zoom'
 
 # Quicklook
@@ -89,6 +86,7 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
+mas 'Amphetamine', id: 937984704 # Prevent display from sleeping
 mas 'ColorSlurp', id: 1287239339 # Color picker
 mas 'HP Smart', id: 1474276998
 mas 'Messenger', id: 1480068668
