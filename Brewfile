@@ -52,6 +52,7 @@ brew 'ghostscript'
 # Apps
 cask '1password'
 cask 'adobe-acrobat-reader'
+cask 'adguard'
 cask 'alfred'
 cask 'babeledit' # Language file editor
 cask 'bartender'
