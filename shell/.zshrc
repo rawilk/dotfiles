@@ -85,8 +85,12 @@ export PATH=$HOME/.dotfiles/bin:$PATH
 # Import ssh keys in keychain
 ssh-add -A 2>/dev/null;
 
+# Ensure autosuggestions highlighting shows up in iterm2
+#  - run following command in terminal for color codes
+#    for code in {000..255}; do print -P -- "$code: %F{$code}Test%f"; done
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+
 # Enable autosuggestions
-# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Extra paths
