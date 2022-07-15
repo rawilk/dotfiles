@@ -30,6 +30,11 @@ echo '---------------------'
 composer global require laravel/valet
 valet install
 
+# Expose
+echo 'Install Expose'
+echo '--------------'
+composer global require beyondcode/expose
+
 # Configure NPM
 echo 'Configure NPM'
 echo '-------------'
