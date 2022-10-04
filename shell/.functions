@@ -26,6 +26,12 @@ archive () {
    zip -r "$1".zip -i "$1" ;
 }
 
+function generateSecret() {
+  # default length to 32 characters long
+  local length="${1:-32}"
+  ruby -rsecurerandom -e "puts SecureRandom.hex($length)"
+}
+
 function removehost() {
    ssh-keygen -R "$1"
 }
