@@ -67,3 +67,24 @@ function scheduler () {
         sleep 60
     done
 }
+
+# Composer functions
+
+# Require a local version of a package. Will default to look for package in our ~/dev/code/packages/ directory.
+# Example usage: composerLocal laravel-form-components
+# Example usage with custom directory: composerLocal laravel-form-components "./packages/laravel-form-components"
+function composerLocal() {
+  local URL="${2:-~/dev/code/packages/${1}}"
+
+  composer config repositories."$1" '{"type": "path", "url": "'"${URL}"'", "options": {"symlink": true}}' --file composer.json
+}
+
+# Require the remote (packagist) version of a package.
+# Example usage: composerRemote laravel-form-components
+function composerRemote() {
+  composer config repositories."$1" --unset
+}
+
+function composerVcs() {
+  composer config repositories."$1" '{"type": "vcs", "url": "'"${2}"'"}' --file composer.json
+}
