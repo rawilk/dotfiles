@@ -33,8 +33,7 @@ alias o="open ."
 alias l="ls -laF"
 
 # PhpStorm
-# alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-alias phpstorm='open -a ~/Library/Application\ Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/213.7172.28/PhpStorm.app "`pwd`"'
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 
 # PHP
 alias switch-php81="brew unlink php@8.0 && brew link --overwrite --force php"
