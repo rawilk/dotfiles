@@ -59,10 +59,9 @@ cask 'bartender'
 cask 'daisydisk'
 cask 'firefox'
 cask 'google-chrome'
-cask 'gpg-suite'
 cask 'iterm2'
 cask 'logitech-options'
-cask 'jetbrains-toolbox' # Will manage PhpStorm & DataGrip through the toolbox for now on.
+cask 'phpstorm'
 cask 'google-chat'
 cask 'phpmon'
 cask 'ray' # spatie debug tool
