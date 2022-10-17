@@ -67,6 +67,7 @@ cask 'phpmon'
 cask 'ray' # spatie debug tool
 cask 'responsively' # Responsive dev app
 cask 'spotify'
+cask 'tableplus' # database gui
 cask 'tinkerwell'
 cask 'transmit'
 cask 'helo'
