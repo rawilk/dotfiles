@@ -105,3 +105,4 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@7/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH=$HOME/bin:~/.config/phpmon/bin:$PATH
