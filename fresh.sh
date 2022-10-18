@@ -70,6 +70,10 @@ echo '++++++++++++++++++++++++++++++'
 echo 'Some optional tidbits'
 
 echo '1. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
+echo '2. Install software not available through Homebrew/App Store:'
+echo '--- PS Remote Play'
+echo '--- Yubico Authenticator'
+echo '--- YubiKey Manager'
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'

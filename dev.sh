@@ -57,3 +57,6 @@ brew services run --all
 
 # Set root mysql password
 mysqladmin -u root -p password
+
+# Link our installed sites
+$DOTFILES/valet-links.sh
