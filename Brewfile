@@ -38,6 +38,7 @@ brew 'php'
 brew 'php@8.0'
 brew 'php@7.4'
 brew 'composer'
+brew 'ghostscript'
 brew 'imagemagick'
 brew 'libmemcached'
 brew 'meilisearch'
@@ -47,30 +48,31 @@ brew 'nginx'
 brew 'node'
 brew 'redis'
 brew 'yarn'
-brew 'ghostscript'
 
 # Apps
 cask '1password'
-cask 'adobe-acrobat-reader'
 cask 'adguard'
+cask 'adobe-acrobat-reader'
 cask 'alfred'
 cask 'babeledit' # Language file editor
+cask 'backblaze' # cloud backups
 cask 'bartender'
 cask 'daisydisk'
 cask 'firefox'
+cask 'google-chat'
 cask 'google-chrome'
+cask 'helo'
 cask 'iterm2'
 cask 'logitech-options'
-cask 'phpstorm'
-cask 'google-chat'
+cask 'nordvpn'
 cask 'phpmon'
+cask 'phpstorm'
 cask 'ray' # spatie debug tool
 cask 'responsively' # Responsive dev app
 cask 'spotify'
 cask 'tableplus' # database gui
 cask 'tinkerwell'
 cask 'transmit'
-cask 'helo'
 cask 'zoom'
 
 # Quicklook
@@ -91,8 +93,8 @@ mas 'Amphetamine', id: 937984704 # Prevent display from sleeping
 mas 'ColorSlurp', id: 1287239339 # Color picker
 mas 'HP Smart', id: 1474276998
 mas 'Messenger', id: 1480068668
-mas 'Microsoft Word', id: 462054704
 mas 'Microsoft Excel', id: 462058435
+mas 'Microsoft Word', id: 462054704
 mas 'Petrify', id: 1451177988 # Code screenshot tool
-mas 'Spark', id: 1176895641
+mas 'Spark', id: 1176895641 # Desktop email gui
 mas 'The Unarchiver', id: 425424353
