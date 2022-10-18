@@ -52,7 +52,7 @@ git clone git@github.com:rawilk/dotfiles.git ~/.dotfiles
 ~/.dotfiles/macos/set-defaults.sh
 ```
 
-![screenshot](https://github.com/rawilk/dotfiles/blob/master/docs/screenshot.png)
+![screenshot](https://github.com/rawilk/dotfiles/blob/main/docs/screenshot.png)
 
 ## Signing Commits - Optional
 It's generally a good idea to sign your git commits with a gpg key. [This article](https://withblue.ink/2020/05/17/how-and-why-to-sign-git-commits.html) explains why you would want to do this in more detail. To do this, you will need to [generate a new gpg key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key) and tell GitHub about it.
