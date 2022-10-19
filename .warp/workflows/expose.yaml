@@ -16,4 +16,6 @@ arguments:
 source_url: "https://expose.dev/docs/client/sharing#share-a-local-site-with-a-given-subdomain"
 author: Randall Wilk
 author_url: "https://randallwilk.dev"
-shells: []
+shells:
+    - Zsh
+    - Bash
