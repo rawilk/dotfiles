@@ -62,7 +62,7 @@ cask 'firefox'
 cask 'google-chat'
 cask 'google-chrome'
 cask 'helo'
-cask 'iterm2'
+# cask 'iterm2'
 cask 'logitech-options'
 cask 'nordvpn'
 cask 'phpmon'
@@ -73,6 +73,7 @@ cask 'spotify'
 cask 'tableplus' # database gui
 cask 'tinkerwell'
 cask 'transmit'
+cask 'warp' # terminal
 cask 'zoom'
 
 # Quicklook
