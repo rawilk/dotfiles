@@ -59,6 +59,13 @@ brew bundle --file $HOME/.dotfiles/Brewfile
 # Setup dev environment
 $HOME/.dotfiles/dev.sh
 
+# Copy our custom warp workflows
+if [[ ! -d ~/.warp/workflows ]];
+then
+  mkdir -p ~/.warp/workflows
+fi
+cp -a $HOME/.dotfiles/.warp/workflows/. ~/.warp/workflows/
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
