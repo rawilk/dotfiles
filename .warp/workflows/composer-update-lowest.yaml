@@ -1,0 +1,11 @@
+name: Composer update lowest
+command: composer update --prefer-lowest --prefer-dist --no-interaction
+tags:
+    - shell
+    - composer
+description: Update composer dependencies to the lowest version
+author: "Randall Wilk"
+author_url: "https://randallwilk.dev"
+shells:
+    - Zsh
+    - Bash
