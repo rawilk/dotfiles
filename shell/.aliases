@@ -89,6 +89,7 @@ alias packages="cd ~/dev/code/packages"
 # macOS stuff
 alias noopenboot="nvram AutoBoot=%00" # disable boot when macbook is opened
 alias allowopenboot="nvram AutoBoot=%03" # allow boot when macbook is opened
+alias bluetooth="sudo pkill bluetoothd"
 
 # Script aliases
 alias startwork="~/.dotfiles/work.sh"
