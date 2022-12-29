@@ -29,7 +29,6 @@ git clone git@github.com:rawilk/skeleton-laravel.git $PERSONAL/skeleton-laravel
 git clone git@github.com:cybrix-solutions/cybrixsolutions.com.git $WORK/cybrixsolutions.com
 git clone git@github.com:cybrix-solutions/notices.merrillha.com $WORK/notices.merrillha.com
 git clone git@github.com:cybrix-solutions/rite.git $WORK/rite
-git clone git@github.com:cybrix-solutions/rite-v3.git $WORK/rite-v3
 
 # Packages
 git clone git@github.com:rawilk/laravel-app-key-rotator.git $PACKAGES/laravel-app-key-rotator
