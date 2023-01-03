@@ -47,6 +47,7 @@ brew 'mysql'
 brew 'nginx'
 brew 'node'
 brew 'redis'
+brew 'supervisor'
 brew 'yarn'
 
 # Apps

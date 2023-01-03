@@ -35,6 +35,11 @@ echo 'Install Expose'
 echo '--------------'
 composer global require beyondcode/expose
 
+# Porter
+echo 'Install Porter'
+echo '--------------'
+composer global require anystack-sh/porter
+
 # Configure NPM
 echo 'Configure NPM'
 echo '-------------'
@@ -45,6 +50,10 @@ npm config set prefix "${HOME}/.npm-packages"
 # Puppeteer
 # - Necessary for spatie browser shot package
 npm install puppeteer --global
+
+# chokidar
+# - Necessary for Porter to restart services when files change
+npm install --global chokidar
 
 # Create dev directories and clone git repos
 $DOTFILES/clone.sh
