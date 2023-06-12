@@ -90,6 +90,7 @@ alias packages="cd ~/dev/code/packages"
 alias noopenboot="nvram AutoBoot=%00" # disable boot when macbook is opened
 alias allowopenboot="nvram AutoBoot=%03" # allow boot when macbook is opened
 alias bluetooth="sudo pkill bluetoothd"
+alias afk="osascript -e 'tell application \"System Events\" to keystroke \"q\" using {command down,control down}'"
 
 # Script aliases
 alias startwork="~/.dotfiles/work.sh"
