@@ -86,6 +86,9 @@ alias personal="cd ~/dev/code/personal"
 alias work="cd ~/dev/code/work"
 alias packages="cd ~/dev/code/packages"
 
+# Misc stuff
+alias fixporter="rm ~/.porter/supervisord.pid"
+
 # macOS stuff
 alias noopenboot="nvram AutoBoot=%00" # disable boot when macbook is opened
 alias allowopenboot="nvram AutoBoot=%03" # allow boot when macbook is opened
