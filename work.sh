@@ -1,12 +1,13 @@
 #!/bin/sh
 
 # launch websites
-open -a "Google Chrome.app" https://resi-rite.test
+open -a "Google Chrome.app" https://resi.rite.test
 
 # other apps
 open -a "Spotify.app"
 open -a "Spark.app" # email
-open -a "BabelEdit.app"
+open -a "ray.app"
+open -a "TablePlus"
 
 # launch work projects
-open -a "PhpStorm.app" ~/dev/code/work/rite-v3
+open -a "PhpStorm.app" ~/dev/code/work/rite
