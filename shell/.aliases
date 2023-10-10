@@ -87,6 +87,8 @@ alias home="cd ~"
 alias personal="cd ~/dev/code/personal"
 alias work="cd ~/dev/code/work"
 alias packages="cd ~/dev/code/packages"
+alias rite="cd ~/dev/code/work/rite"
+alias randallwilk="cd ~/dev/code/personal/randallwilk.dev"
 
 # Misc stuff
 alias fixporter="rm ~/.porter/supervisord.pid"
