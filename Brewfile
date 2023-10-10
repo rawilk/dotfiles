@@ -3,7 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'nicoverbruggen/homebrew-cask' # PHP monitor
+# tap 'nicoverbruggen/homebrew-cask' # PHP monitor
 tap 'stripe/stripe-cli'
 
 # Binaries
@@ -38,6 +38,7 @@ brew 'php'
 brew 'php@8.1'
 brew 'php@8.0'
 brew 'composer'
+brew 'herd' # Valet alternative
 brew 'ghostscript'
 brew 'imagemagick'
 brew 'libmemcached'
@@ -54,7 +55,6 @@ brew 'yarn'
 cask '1password'
 cask 'adguard'
 cask 'adobe-acrobat-reader'
-cask 'alfred'
 cask 'babeledit' # Language file editor
 cask 'backblaze' # cloud backups
 cask 'bartender'
@@ -63,10 +63,9 @@ cask 'firefox'
 cask 'google-chat'
 cask 'google-chrome'
 cask 'helo'
-cask 'iterm2'
 cask 'logitech-options'
 cask 'nordvpn'
-cask 'phpmon'
+# cask 'phpmon'
 cask 'phpstorm'
 cask 'ray' # spatie debug tool
 cask 'responsively' # Responsive dev app
