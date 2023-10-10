@@ -71,7 +71,9 @@ alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 
 # SSH Aliases
 alias ssh-randallwilk="ssh forge@157.230.216.192"
-alias ssh-rite="ssh forge@137.184.159.184"
+alias ssh-rite="ssh forge@5.161.99.244"
+alias ssh-rite-stage="ssh stage@5.161.99.244"
+alias ssh-rite-db="ssh forge@5.161.81.62"
 alias ssh-cybrix="ssh forge@167.71.31.100"
 alias ssh-mha="ssh forge@165.227.198.189"
 alias ssh-hamptonbays="ssh forge@161.35.121.245"
