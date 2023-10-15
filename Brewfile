@@ -58,6 +58,7 @@ cask 'adobe-acrobat-reader'
 cask 'babeledit' # Language file editor
 cask 'backblaze' # cloud backups
 cask 'bartender'
+cask 'dbngin' # Manage databases
 cask 'daisydisk'
 cask 'firefox'
 cask 'google-chat'
