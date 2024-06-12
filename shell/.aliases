@@ -29,6 +29,7 @@ alias gc="git checkout"
 alias gp="git pull"
 alias gpo="git push origin"
 alias gm="git merge"
+alias gsync="git pull --rebase origin main"
 
 # Fast open
 alias o="open ."
