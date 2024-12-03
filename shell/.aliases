@@ -18,6 +18,7 @@ alias sshconfig="nano ~/.ssh/config"
 alias copyssh="pbcopy < $HOME/.ssh/id_ed255519.pub"
 alias pint="vendor/bin/pint"
 alias pintd="vendor/bin/pint --dirty"
+alias php="herd php"
 
 # Composer Unlimited Memory Commands...
 alias cru="COMPOSER_MEMORY_LIMIT=-1 composer require"
