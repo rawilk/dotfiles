@@ -69,16 +69,13 @@ cp -a $HOME/.dotfiles/.warp/workflows/. ~/.warp/workflows/
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
-echo 'Things to do to make the agnoster terminal theme work:'
-echo '1. Set the font in iTerm to Source Code Pro for Powerline'
-echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
 
 echo '++++++++++++++++++++++++++++++'
 echo 'Some optional tidbits'
 
 echo '1. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
 echo '2. Install software not available through Homebrew/App Store:'
-echo '--- PS Remote Play'
+echo '--- Showcode'
 echo '--- Yubico Authenticator'
 echo '--- YubiKey Manager'
 

@@ -67,5 +67,8 @@ brew services run --all
 # Set root mysql password
 mysqladmin -u root -p password
 
+# Create postgres root user
+createuser --createdb root
+
 # Link our installed sites
 $DOTFILES/valet-links.sh

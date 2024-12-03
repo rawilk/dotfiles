@@ -24,3 +24,18 @@ export MANPAGER="less -X"
 
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
+
+# Path
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@7/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH=$HOME/bin:~/.config/phpmon/bin:$PATH
+export PATH="/Applications/PhpStorm.app/Contents/MacOS:$PATH"
+export PATH="/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH"
+export PATH=/Users/Shared/DBngin/postgresql/17.0/bin:$PATH
+
+# DBngin stuff
+export MYSQL_UNIX_PORT=/tmp/mysql_3306.sock

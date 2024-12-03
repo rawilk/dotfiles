@@ -92,17 +92,3 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
 # Enable autosuggestions
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Extra paths
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH=/usr/local/bin:$PATH
-export PATH="$HOME/.yarn/bin:$PATH"
-# export PATH="/usr/local/opt/mariadb/bin:$PATH"
-export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
-# export PATH="/usr/local/opt/node@12/bin:$PATH"
-# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PATH="/usr/local/opt/imagemagick@7/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH=$HOME/bin:~/.config/phpmon/bin:$PATH
-export PATH="/Applications/PhpStorm.app/Contents/MacOS:$PATH"
