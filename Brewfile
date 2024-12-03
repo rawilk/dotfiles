@@ -33,6 +33,7 @@ brew 'imagemagick'
 
 # Apps
 cask '1password'
+brew '1password-cli'
 cask 'adguard'
 cask 'adobe-acrobat-reader'
 cask 'backblaze' # cloud backups
