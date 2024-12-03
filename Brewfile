@@ -27,6 +27,7 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Development
+brew 'php' # Needed for imagick and other extensions
 brew 'herd' # Valet alternative
 brew 'ghostscript'
 brew 'imagemagick'
