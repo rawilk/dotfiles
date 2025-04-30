@@ -17,10 +17,17 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Skynet"
-sudo scutil --set HostName "Skynet"
-sudo scutil --set LocalHostName "Skynet"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Skynet"
+set_computer_name() {
+    local name
+    read -rp "What should this Mac be called? " name
+
+    sudo scutil --set ComputerName "$name"
+    sudo scutil --set HostName "$name"
+    sudo scutil --set LocalHostName "$name"
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$name"
+}
+
+set_computer_name
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
