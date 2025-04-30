@@ -17,7 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-set_computer_name() {
+function set_computer_name() {
     local name
     read -rp "What should this Mac be called? " name
 
