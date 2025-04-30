@@ -61,17 +61,6 @@ then
 fi
 cp -a "$HOME/.dotfiles/.warp/workflows/." ~/.warp/workflows/
 
-echo "++++++++++++++++++++++++++++++"
-echo "++++++++++++++++++++++++++++++"
-echo "All done!"
-
-echo "++++++++++++++++++++++++++++++"
-echo "Some optional tidbits"
-
-echo "1. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh"
-echo "2. Install software not available through Homebrew/App Store:"
-echo "--- Showcode"
-echo "--- YubiKey Manager"
-
-echo "++++++++++++++++++++++++++++++"
-echo "++++++++++++++++++++++++++++++"
+# Set macOS preferences - we will run this last because this will reload the shell.
+echo "Installation complete. Now setting some macOS defaults..."
+source "$HOME/.dotfiles/macos/set-defaults.sh"
