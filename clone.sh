@@ -45,13 +45,12 @@ git clone git@github.com:cybrix-solutions/notices.merrillha.com "$WORK/notices.m
 git clone git@github.com:cybrix-solutions/rite.git "$WORK/rite"
 
 # Packages
-git clone git@github.com:cybrix-solutions/easypost.git "$PACKAGES/easypost"
+git clone git@github.com:cybrix-solutions/easypost.git "$PACKAGES/cybrix-solutions/easypost"
 git clone git@github.com:rawilk/filament-password-input.git "$PACKAGES/filament-password-input"
 git clone git@github.com:rawilk/filament-quill.git "$PACKAGES/filament-quill"
 git clone git@github.com:rawilk/human-keys.git "$PACKAGES/human-keys"
 git clone git@github.com:rawilk/laravel-app-key-rotator.git "$PACKAGES/laravel-app-key-rotator"
 git clone git@github.com:rawilk/laravel-casters.git "$PACKAGES/laravel-casters"
-git clone git@github.com:rawilk/laravel-form-components.git "$PACKAGES/laravel-form-components"
 git clone git@github.com:rawilk/laravel-printing.git "$PACKAGES/laravel-printing"
 git clone git@github.com:rawilk/laravel-settings.git "$PACKAGES/laravel-settings"
 git clone git@github.com:rawilk/laravel-stubs.git "$PACKAGES/laravel-stubs"
@@ -65,3 +64,6 @@ git clone git@github.com:rawilk/alpine-ripple.git "$NPM/alpine-ripple"
 
 # Client Repos
 git clone git@github.com:lifelinecpr/newlife.git "$CLIENTS/lifelinecpr/portal.newlifecpr"
+
+# Vendor repos - for reference
+git clone git@github.com:filamentphp/filament.git "$CODE/vendor/filament"

@@ -3,11 +3,6 @@
 echo "Setting up dev environment"
 echo ""
 
-# Imagick
-echo "Install imagick"
-echo ""
-pecl install imagick
-
 # Laravel global installer
 echo "Install Laravel global installer"
 echo ""
@@ -29,17 +24,6 @@ npm install puppeteer --global
 
 # Install Powerline Patched Fonts
 "$DOTFILES/install-fonts.sh"
-
-# Start all services
-# I'm not sure I actually have any services that run through Homebrew anymore...
-# brew services run --all
-
-# Note: DB's are managed through Herd now.
-# Set root mysql password
-# mysqladmin -u root -p password
-
-# Create postgres root user
-# createuser --createdb root
 
 # Link our installed sites
 "$DOTFILES/herd-links.sh"

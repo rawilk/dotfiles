@@ -5,6 +5,14 @@ echo "Setting up your Mac..."
 # Hide "last login" line when starting a new terminal session
 touch "$HOME/.hushlogin"
 
+# Check if Xcode Command Line Tools are installed
+if ! xcode-select -p &>/dev/null; then
+  echo "Xcode Command Line Tools not found. Installing..."
+  xcode-select --install
+else
+  echo "Xcode Command Line Tools already installed."
+fi
+
 # Check for Oh My Zsh and install if we don"t have it
 if test ! $(which omz); then
   echo "Install oh-my-zsh"
@@ -19,16 +27,13 @@ git config --global core.excludesfile "$HOME/.global-gitignore"
 
 # Symlink zsh preferences
 rm -rf "$HOME/.zshrc"
-ln -s "$HOME/.dotfiles/shell/.zshrc" "$HOME/.zshrc"
-
-# Symlink the Mackup config
-ln -s "$HOME/.dotfiles/macos/.mackup.cfg" "$HOME/.mackup.cfg"
+ln -sw "$HOME/.dotfiles/shell/.zshrc" "$HOME/.zshrc"
 
 # Activate z
 cd ~/.dotfiles/shell
 chmod +x z.sh
 
-# Check for Homebrew and install if we don"t have it
+# Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   echo "Install homebrew"
   echo ""
@@ -66,7 +71,6 @@ echo "Some optional tidbits"
 echo "1. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh"
 echo "2. Install software not available through Homebrew/App Store:"
 echo "--- Showcode"
-echo "--- Yubico Authenticator"
 echo "--- YubiKey Manager"
 
 echo "++++++++++++++++++++++++++++++"

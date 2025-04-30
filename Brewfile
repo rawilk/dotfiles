@@ -8,10 +8,8 @@ tap 'stripe/stripe-cli'
 brew 'ack'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
-brew 'httpie'
 brew 'gh'
 brew 'git'
-brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config'
 brew 'stripe/stripe-cli/stripe'
@@ -27,30 +25,32 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Development
-brew 'php' # Needed for imagick and other extensions
-brew 'herd' # Valet alternative
-brew 'ghostscript'
 brew 'imagemagick'
+brew 'ghostscript'
 
 # Apps
 cask '1password'
 brew '1password-cli'
 cask 'adguard'
-cask 'adobe-acrobat-reader'
 cask 'backblaze' # cloud backups
 cask 'bartender'
-cask 'dbngin' # Manage databases
 cask 'daisydisk'
+cask 'discord'
 cask 'firefox'
+cask 'github' # GitHub desktop client
 cask 'google-chat'
 cask 'google-chrome'
 cask 'helo'
+cask 'herd'
+cask 'imageoptim'
 cask 'logitech-options'
 cask 'microsoft-edge'
 cask 'phpstorm'
 cask 'ray' # spatie debug tool
-cask 'responsively' # Responsive dev app
+cask 'raycast'
+cask 'slack'
 cask 'spotify'
+cask 'steermouse' # Offers better control over mice
 cask 'tableplus' # database gui
 cask 'tinkerwell'
 cask 'transmit'
@@ -59,7 +59,10 @@ cask 'warp' # terminal
 cask 'zoom'
 
 # Quicklook
+cask 'qlmarkdown'
 cask 'quicklook-json'
+cask 'quicklook-csv'
+cask 'suspicious-package'
 
 # Fonts
 cask 'font-lato'
@@ -75,10 +78,5 @@ cask 'font-source-serif-pro'
 mas '1Password for Safari', id: 1569813296
 mas 'Amphetamine', id: 937984704 # Prevent display from sleeping
 mas 'ColorSlurp', id: 1287239339 # Color picker
-mas 'HP Smart', id: 1474276998
-mas 'Messenger', id: 1480068668
 mas 'Spark', id: 1176895641 # Desktop email gui
-mas 'Speedtest', id: 1153157709 # Internet speed test app
-mas 'The Unarchiver', id: 425424353
-mas 'Xcode', id: 497799835
 mas 'Yubico Authenticator', id: 1497506650

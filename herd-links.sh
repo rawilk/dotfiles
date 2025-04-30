@@ -7,6 +7,7 @@ herd link resi.rite
 herd secure rite
 herd secure resi.rite
 
+# Personal site
 cd ~/dev/code/personal/randallwilk.dev
 herd link
 herd secure
