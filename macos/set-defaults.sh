@@ -17,10 +17,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "MacBook Randall"
-sudo scutil --set HostName "MacBook Randall"
-sudo scutil --set LocalHostName "MacBook Randall"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook Randall"
+sudo scutil --set ComputerName "Skynet"
+sudo scutil --set HostName "Skynet"
+sudo scutil --set LocalHostName "Skynet"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Skynet"
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
