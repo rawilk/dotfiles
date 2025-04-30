@@ -81,6 +81,7 @@ alias work="cd ~/dev/code/work"
 alias packages="cd ~/dev/code/packages"
 alias rite="cd ~/dev/code/work/rite"
 alias randallwilk="cd ~/dev/code/personal/randallwilk.dev"
+alias pm="cd ~/dev/code/artisanpm/artisanpm"
 
 # macOS stuff
 alias noopenboot="nvram AutoBoot=%00" # disable boot when macbook is opened
