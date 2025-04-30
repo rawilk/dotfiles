@@ -3,107 +3,45 @@ This repository serves as my way to help me setup and maintain my Mac. It takes 
 everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme. Feel free
 to explore, learn and copy parts for your own dotfiles.
 
-## A Fresh macOS Setup
+# A Fresh macOS Setup
 These instructions are for when you've already set up your dotfiles. If you want to get started on your own dotfiles you can
 [find instructions below](#your-own-dotfiles).
 
-### Before you re-install
-First, go through the checklist below to make sure you didn't forget anything before you wipe your hard drive.
+## Backup your data
+If you're migrating from an existing Mac, you should first make sure to back up all of your existing data. Go through the checklist below to make sure you didn't forget anything before you migrate.
+
 - Did you commit and push any changes/branches to your git repositories?
 - Did you remember to save all important documents from non-iCloud directories?
 - Did you save all of your work from apps which aren't synced through iCloud?
 - Did you remember to export important data from your local database?
-- Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`?
-
-### Installing macOS cleanly
-After going through our checklist above and making sure you backed everything up, we're going to cleanly install macOS with the latest release. Follow [this article](https://www.imore.com/how-do-clean-install-macos) to cleanly install the latest macOS version.
 
 ## Setting up your Mac
-If you did all of the above you may now follow these install instructions to setup a new Mac.
+After backing up your old Mac, you may now follow these installation instructions to set up a new one.
 
-1. Update macOS to the latest version with the App Store
-2. Install Xcode from the App Store, open it and accept the license agreement
-3. Install macOS Command Line tools by running `xcode-select --install`
-4. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
+> **Note:** these installation instructions are tailored to myself. Your requirements may vary, and you should be pulling down [your own dotfiles repository](#your-own-dotfiles).
+
+1. Update macOS to the latest version through system preferences.
+2. Set up an SSH key by installing 1Password. Use the 1Password [SSH agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) and sync your SSH keys locally. Make sure to set the default key used in the terminal to the SSH key set in the GitHub account.
+3. Clone this repository to `~/.dotfiles` with:
 ```bash
-curl https://raw.githubusercontent.com/rawilk/dotfiles/HEAD/ssh.sh | sh -s "<your-email-address>"
-```
-3. Clone this repo to `~/.dotfiles` with:
-```bash
-git clone git@github.com:rawilk/dotfiles.git ~/.dotfiles
+git clone --recursive git@github.com/rawilk/dotfiles.git ~/.dotfiles
 ```
 4. Run the installation with:
 ```bash
-~/.dotfiles/fresh.sh
+cd ~/.dotfiles && ./fresh.sh
 ```
-5. After mackup is synced with your local storage, restore preferences by running `mackup restore`
-6. Restart your computer to finalize the process
-
-> 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the reference in the [`.zshrc`](./shell/.zshrc#L2) file.
+5. Start `Herd.app` and run its installation process.
+6. Restart your computer to finalize the process.
 
 Your Mac is now ready to use!
 
-### All install commands
+> 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the reference in the [`.zshrc`](./shell/.zshrc#L2) file.
 
-```bash
-curl https://raw.githubusercontent.com/rawilk/dotfiles/HEAD/ssh.sh | sh -s "<your-email-address>"
-git clone git@github.com:rawilk/dotfiles.git ~/.dotfiles
-~/.dotfiles/fresh.sh
-~/.dotfiles/macos/set-defaults.sh
-```
+### Cleaning your old Mac (optional)
+After you've set up your new Mac, you may want to wipe it and perform a clean installation on it. Follow [this article](https://support.apple.com/guide/mac-help/erase-and-reinstall-macos-mh27903/mac) to do that. Remember to back up any important data first, though!
 
-![screenshot](https://github.com/rawilk/dotfiles/blob/main/docs/iterm.png)
-
-## Signing Commits - Optional
-It's generally a good idea to sign your git commits with a gpg key. [This article](https://withblue.ink/2020/05/17/how-and-why-to-sign-git-commits.html) explains why you would want to do this in more detail. To do this, you will need to [generate a new gpg key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key) and tell GitHub about it.
-
-### Generate a GPG key pair
-Your key must use RSA.
-```bash
-gpg --full-generate-key
-```
-
-- At the prompt, specify the kind of key you want - press `Enter` to accept the default
-- At the prompt, specify the key size you want - press `Enter` to accept the default. Your key must be at least `4096` bits.
-- Enter the length of time the key should be valid. Press `Enter` to specify the default selection, indicating that the key doesn't expire.
-- Enter your user ID information
-  - Ensure you are using the verified email address for your GitHub account.
-- Type a secure passphrase
-
-### Find your new key
-```bash
-gpg --list-secret-keys --keyid-format=long
-```
-
-From the list of GPG keys, copy the long form of the GPG key ID you'd like to use. In this example, the GPG key ID is `3AA5C34371567BD2`:
-```bash
-gpg --list-secret-keys --keyid-format=long
-/Users/hubot/.gnupg/secring.gpg
-------------------------------------
-sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
-uid                          Hubot 
-ssb   4096R/42B317FD4BA89E7A 2016-03-10
-```
-
-### Copy the key
-Paste the command below, substituting the GPG key ID you'd like to use. In this example, the GPG key ID is `3AA5C34371567BD2`:
-```bash
-gpg --armor --export 3AA5C34371567BD2
-# Prints the GPG key ID, in ASCII armor format
-```
-
-Now you can add the key to your GitHub account.
-
-### Sign your commits
-Using the same key ID from the example above, enter the following command:
-```bash
-git config --global user.signingkey 3AA5C34371567BD2
-```
-
-To auto-sign all commits, enter the following command:
-```bash
-git config --global commit.gpgSign true
-```
+### Fresh macOS install
+From time-to-time, it may be beneficial to completely re-install macOS on your machine and start over. I typically like to do this for each major release of macOS. After going through the [checklist](#backup-your-data) above, you can follow [this article](https://www.imore.com/how-do-clean-install-macos) to cleanly install the latest macOS version.
 
 ## Your Own Dotfiles
 **Please note that the instructions below assume you already have set up Oh My Zsh so make sure to first [install Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started) before you continue.**
