@@ -6,7 +6,7 @@ I typically don't do a lot of development on Windows, so this version of my dotf
 > 💡 This setup is intended for fresh Windows installations.
 
 # A Fresh Windows Setup
-These instructions are for when you've already set up your dotfiles. If you want to get started on your own dotfiles you can
+These instructions are for when you've already set up your dotfiles. If you want to get started on your own dotfiles, you can
 [find instructions below](#your-own-dotfiles).
 
 ## Backup your data
