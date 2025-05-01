@@ -46,7 +46,7 @@ From time-to-time, it may be beneficial to completely re-install macOS on your m
 # Your Own Dotfiles
 **Please note that the instructions below assume you already have set up Oh My Zsh so make sure to first [install Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started) before you continue.**
 
-If you want to install your own dotfiles from this setup, it's pretty easy to do so. First, you'll need to fork this repo. After that you can tweak it any way you want.
+If you want to install your own dotfiles from this setup, it's pretty straightforward to do so. First, you'll need to fork this repo. After that you can tweak it any way you want.
 
 Go through the [`.macos`](./macos/.set-defaults.sh) file and adjust the settings to your liking. You can find many more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
 
