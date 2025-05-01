@@ -15,6 +15,7 @@ $packages = @(
     "herd", # Laravel Herd
     "logitech-options",
     "phpstorm",
+    "sparkmail",
     "spotify",
     "steam",
     "warp-terminal"
@@ -33,6 +34,7 @@ Write-Host "`n📦 Installing additional software with Winget..."
 
 $wingetPackages = @(
     "Asus.ArmouryCrate",
+    "Spatie.Ray",
     "WeMod.WeMod"
 )
 
