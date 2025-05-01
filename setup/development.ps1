@@ -59,3 +59,22 @@ git clone git@github.com:rawilk/profile-filament-plugin.git "$PACKAGES\profile-f
 git clone git@github.com:rawilk/alpine-ripple.git "$NPM\alpine-ripple"
 
 git clone git@github.com:lifelinecpr/newlife.git "$CLIENTS\lifelinecpr\portal.newlifecpr"
+
+# --------------------------------------------------------------------------
+# NPM global packages configuration
+# --------------------------------------------------------------------------
+
+Write-Host "`n🧰 Configuring NPM global package directory..." -ForegroundColor Cyan
+
+$npmGlobalDir = "$HOME\.npm-packages"
+
+if (-not (Test-Path $npmGlobalDir)) {
+    New-Item -ItemType Directory -Path $npmGlobalDir | Out-Null
+    Write-Host "✔️ Created directory: $npmGlobalDir"
+}
+else {
+    Write-Host "ℹ️ Directory already exists: $npmGlobalDir"
+}
+
+Write-Host "📦 Setting NPM prefix..."
+npm config set prefix $npmGlobalDir
