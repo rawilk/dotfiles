@@ -25,19 +25,20 @@ After backing up your old PC, you may now follow these installation instructions
 > ⚠️ Run all terminal commands from a PowerShell terminal with administrator privileges.
 
 1. Update Windows to the latest version through system preferences.
-2. Set up an SSH key by installing 1Password. Use the 1Password [SSH agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) and sync your SSH keys locally. Make sure to set the default key used in the terminal to the SSH key set in the GitHub account.
-3. Clone this branch to `~/.dotfiles` with:
+2. Install and update all relevant drivers
+3. Set up an SSH key by installing 1Password. Use the 1Password [SSH agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) and sync your SSH keys locally. Make sure to set the default key used in the terminal to the SSH key set in the GitHub account.
+4. Clone this branch to `~/.dotfiles` with:
 ```powershell
 git clone --recursive --branch windows https://github.com/rawilk/dotfiles.git $HOME\dotfiles
 cd $HOME\dotfiles
 ```
-4. Run the installation with:
+5. Run the installation with:
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\fresh.ps1
 ```
-5. Start `Laravel Herd` and run its installation process.
-6. Restart your computer to finalize the process.
+6. Start `Laravel Herd` and run its installation process.
+7. Restart your computer to finalize the process.
 
 Your PC is now ready to use!
 
