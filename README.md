@@ -1,10 +1,10 @@
 # My personal dotfiles
-This repository serves as my way to help me setup and maintain my Mac. It takes the effort out of installing
+This repository serves as my way to help me set up and maintain my Mac. It takes the effort out of installing
 everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme. Feel free
 to explore, learn and copy parts for your own dotfiles.
 
 # A Fresh macOS Setup
-These instructions are for when you've already set up your dotfiles. If you want to get started on your own dotfiles you can
+These instructions are for when you've already set up your dotfiles. If you want to get started on your own dotfiles, you can
 [find instructions below](#your-own-dotfiles).
 
 ## Backup your data
@@ -43,19 +43,19 @@ After you've set up your new Mac, you may want to wipe it and perform a clean in
 ### Fresh macOS install
 From time-to-time, it may be beneficial to completely re-install macOS on your machine and start over. I typically like to do this for each major release of macOS. After going through the [checklist](#backup-your-data) above, you can follow [this article](https://www.imore.com/how-do-clean-install-macos) to cleanly install the latest macOS version.
 
-## Your Own Dotfiles
+# Your Own Dotfiles
 **Please note that the instructions below assume you already have set up Oh My Zsh so make sure to first [install Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started) before you continue.**
 
-If you want to install your own dotfiles from this setup, it's pretty easy to do so. First you'll need to fork this repo. After that you can tweak it any way you want.
+If you want to install your own dotfiles from this setup, it's pretty easy to do so. First, you'll need to fork this repo. After that you can tweak it any way you want.
 
-Go through the [`.macos`](./macos/.set-defaults.sh) file and adjust the settings to your liking. You can find much more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
+Go through the [`.macos`](./macos/.set-defaults.sh) file and adjust the settings to your liking. You can find many more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
 
 Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://caskroom.github.io/search) to check if the app you want to install is available.
 
 Check out the [`.aliases`](./shell/.aliases) file and add your own aliases. If you need to tweak your `$PATH` check out the [`.zshrc`](./shell/.zshrc) file. More info about how to customize Oh My Zsh can be found [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Customization).
 
-## Credits
-Inspiration for these dotfiles taken from:
+# Credits
+Inspiration for these dotfiles is taken from:
 
 - [Dries Vints Dot Files](https://github.com/driesvints/dotfiles)
 - [Freek Van der Herten Dot Files](https://github.com/freekmurze/dotfiles)
