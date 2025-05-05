@@ -78,5 +78,6 @@ cask 'font-source-serif-pro'
 mas '1Password for Safari', id: 1569813296
 mas 'Amphetamine', id: 937984704 # Prevent display from sleeping
 mas 'ColorSlurp', id: 1287239339 # Color picker
+mas 'Folder Preview', id: 6698876601 # Quicklook extension
 mas 'Spark Desktop', id: 6445813049 # Email client
 mas 'Yubico Authenticator', id: 1497506650
