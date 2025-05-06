@@ -34,6 +34,7 @@ brew '1password-cli'
 cask 'adguard'
 cask 'backblaze' # cloud backups
 cask 'bartender'
+cask 'blip' # File sharing
 cask 'daisydisk'
 cask 'discord'
 cask 'firefox'
