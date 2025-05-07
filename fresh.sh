@@ -54,6 +54,15 @@ brew bundle --file "$HOME/.dotfiles/Brewfile"
 # Setup dev environment
 "$HOME/.dotfiles/dev.sh"
 
+# Ensure all warp themes are available
+if [[ ! -d ~/.warp ]];
+then
+  mkdir -p ~/.warp
+fi
+cd ~/.warp
+git clone https://github.com/warpdotdev/themes.git
+cd $HOME
+
 # Copy our custom warp workflows
 if [[ ! -d ~/.warp/workflows ]];
 then
