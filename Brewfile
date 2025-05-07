@@ -45,7 +45,7 @@ cask 'google-chrome'
 cask 'helo'
 cask 'herd'
 cask 'imageoptim'
-cask 'logitech-options'
+cask 'logi-options+'
 cask 'microsoft-edge'
 cask 'phpstorm'
 cask 'ray' # spatie debug tool
