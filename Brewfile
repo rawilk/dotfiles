@@ -10,6 +10,7 @@ brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'gh'
 brew 'git'
+brew 'hub'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config'
 brew 'stripe/stripe-cli/stripe'
