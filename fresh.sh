@@ -18,6 +18,11 @@ if test ! $(which omz); then
   echo "Install oh-my-zsh"
   echo ""
 
+  # Remove directory if exists
+  if [[ -d ~/.oh-my-zsh ]]; then
+    rm -rf ~/.oh-my-zsh
+  fi
+
   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
 fi
 
