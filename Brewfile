@@ -29,7 +29,7 @@ brew 'imagemagick'
 brew 'ghostscript'
 
 # Apps
-cask '1password'
+# cask '1password' # commented out because it will already be downloaded by this point in fresh install
 brew '1password-cli'
 cask 'adguard'
 cask 'alcove' # notch utility
