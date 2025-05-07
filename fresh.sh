@@ -48,7 +48,7 @@ fi
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
+# brew tap homebrew/bundle -- deprecated
 brew bundle --file "$HOME/.dotfiles/Brewfile"
 
 # Setup dev environment
