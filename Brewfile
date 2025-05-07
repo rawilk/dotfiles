@@ -30,7 +30,7 @@ brew 'ghostscript'
 
 # Apps
 # cask '1password' # commented out because it will already be downloaded by this point in fresh install
-brew '1password-cli'
+cask '1password-cli'
 cask 'adguard'
 cask 'alcove' # notch utility
 cask 'backblaze' # cloud backups
