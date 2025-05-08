@@ -41,7 +41,6 @@ cask 'daisydisk'
 cask 'discord'
 cask 'firefox'
 cask 'github' # GitHub desktop client
-cask 'google-chat'
 cask 'google-chrome'
 cask 'helo'
 cask 'herd'
