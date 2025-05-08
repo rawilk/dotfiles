@@ -11,7 +11,7 @@ brew 'hub'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config'
 brew 'stripe/stripe-cli/stripe'
-brew 'stripe/stripe-mock/stripe-mock'
+brew 'stripe-mock'
 brew 'svn' # Needed to install fonts
 brew 'zsh-autosuggestions'
 
