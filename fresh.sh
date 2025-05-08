@@ -13,19 +13,6 @@ else
   echo "Xcode Command Line Tools already installed."
 fi
 
-# Check for Oh My Zsh and install if we don"t have it
-if test ! $(which omz); then
-  echo "Install oh-my-zsh"
-  echo ""
-
-  # Remove directory if exists
-  if [[ -d ~/.oh-my-zsh ]]; then
-    rm -rf ~/.oh-my-zsh
-  fi
-
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
-fi
-
 # Add global gitignore
 ln -s "$HOME/.dotfiles/shell/.global-gitignore" "$HOME/.global-gitignore"
 git config --global core.excludesfile "$HOME/.global-gitignore"
@@ -33,10 +20,6 @@ git config --global core.excludesfile "$HOME/.global-gitignore"
 # Symlink zsh preferences
 rm -rf "$HOME/.zshrc"
 ln -sw "$HOME/.dotfiles/shell/.zshrc" "$HOME/.zshrc"
-
-# Activate z
-cd ~/.dotfiles/shell
-chmod +x z.sh
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
@@ -53,11 +36,12 @@ fi
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-# brew tap homebrew/bundle -- deprecated
 brew bundle --file "$HOME/.dotfiles/Brewfile"
 
 # Setup dev environment
 "$HOME/.dotfiles/dev.sh"
+
+cd $HOME
 
 # Ensure all warp themes are available
 if [[ ! -d ~/.warp ]];

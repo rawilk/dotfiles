@@ -3,11 +3,6 @@
 echo "Setting up dev environment"
 echo ""
 
-# Laravel global installer
-echo "Install Laravel global installer"
-echo ""
-composer global require laravel/installer
-
 # Configure NPM
 echo "Configure NPM"
 echo ""

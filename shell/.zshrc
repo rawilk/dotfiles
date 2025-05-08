@@ -3,21 +3,13 @@ export DOTFILES="$HOME/.dotfiles"
 
 ZSH_DISABLE_COMPFIX="true"
 
-# Path to your oh-my-zsh configuration.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.zshrc"
 
 # Path to your custom zsh folder
 ZSH_CUSTOM="$DOTFILES/shell"
 
 # Hide username in prompt
 DEFAULT_USER=`whoami`
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git composer macos)
-
-source "$ZSH/oh-my-zsh.sh"
 
 # Load the shell dotfiles, and then some:
 # *~/.extra can be used for other settings you don't want to commit.
@@ -27,15 +19,17 @@ done
 
 unset file
 
-# Maintain a list of visited directories for easier access in the terminal.
-. $HOME/.dotfiles/shell/z.sh
-
-# Alias hub to git
-eval "$(hub alias -s)"
-
-
 # Herd injected NVM configuration
 export NVM_DIR="/Users/randall/Library/Application Support/Herd/config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+
+# Herd injected PHP binary.
+export PATH="/Users/randall/Library/Application Support/Herd/bin/":$PATH
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/randall/Library/Application Support/Herd/config/php/84/"
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/randall/Library/Application Support/Herd/config/php/83/"

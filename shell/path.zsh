@@ -8,11 +8,8 @@ add_to_path() {
 # Load dotfiles binaries
 add_to_path "$DOTFILES/bin"
 
-# Load global Composer tools
-add_to_path "$HOME/.composer/vendor/bin"
-
-# Load global Node installed binaries
-add_to_path "$HOME/.node/bin"
+# Herd Binaries
+# add_to_path "$HOME/Library/Application Support/Herd/bin"
 
 # Sudoless npm https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
@@ -23,12 +20,5 @@ add_to_path "$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 # Extra paths
-add_to_path "/usr/local/bin"
-add_to_path "/usr/local/opt/imagemagick@7/bin"
 add_to_path "/Applications/PhpStorm.app/Contents/MacOS"
-add_to_path "/usr/local/sbin"
 add_to_path "/opt/homebrew/bin"
-
-# Use project specific binaries before global ones
-add_to_path "vendor/bin"
-add_to_path "node_modules/.bin"
