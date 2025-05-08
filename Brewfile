@@ -50,6 +50,7 @@ cask 'microsoft-edge'
 cask 'phpstorm'
 cask 'ray' # spatie debug tool
 cask 'raycast'
+cask 'shottr' # screen shot tool
 cask 'slack'
 cask 'spotify'
 cask 'steermouse' # Offers better control over mice
