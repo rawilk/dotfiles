@@ -31,7 +31,6 @@ brew 'ghostscript'
 cask '1password-cli'
 cask 'adguard'
 cask 'alcove' # notch utility
-cask 'backblaze' # cloud backups
 cask 'bartender'
 cask 'blip' # File sharing
 cask 'daisydisk'
