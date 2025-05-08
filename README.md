@@ -24,7 +24,7 @@ After backing up your old Mac, you may now follow these installation instruction
 2. Set up an SSH key by installing 1Password. Use the 1Password [SSH agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) and sync your SSH keys locally. Make sure to set the default key used in the terminal to the SSH key set in the GitHub account.
 3. Clone this repository to `~/.dotfiles` with:
 ```bash
-git clone --recursive git@github.com/rawilk/dotfiles.git ~/.dotfiles
+git clone --recursive https://git@github.com/rawilk/dotfiles.git ~/.dotfiles
 ```
 4. Run the installation with:
 ```bash
