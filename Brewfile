@@ -70,8 +70,6 @@ cask 'font-poppins'
 cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
 
 # Mac App Store
 mas '1Password for Safari', id: 1569813296
