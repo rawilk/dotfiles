@@ -15,10 +15,10 @@ npm config set prefix "$HOME/.npm-packages"
 npm install puppeteer --global
 
 # Create dev directories and clone git repos
-"$DOTFILES/clone.sh"
+"$HOME/.dotfiles/clone.sh"
 
 # Install Powerline Patched Fonts
-"$DOTFILES/install-fonts.sh"
+"$HOME/.dotfiles/install-fonts.sh"
 
 # Link our installed sites
-"$DOTFILES/herd-links.sh"
+"$HOME/.dotfiles/herd-links.sh"
