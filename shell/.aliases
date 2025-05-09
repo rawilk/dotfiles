@@ -2,6 +2,7 @@
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
 alias a="herd php artisan"
+alias ci="herd composer install"
 alias cu="herd composer update"
 alias cr="herd composer require"
 alias crm="herd composer remove"
