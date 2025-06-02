@@ -35,6 +35,7 @@ cask 'aldente'
 cask 'appcleaner'
 cask 'bartender'
 cask 'blip' # File sharing
+cask 'chatgpt'
 cask 'daisydisk'
 cask 'discord'
 cask 'firefox'
