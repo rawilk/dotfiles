@@ -56,6 +56,7 @@ cask 'steermouse' # Offers better control over mice
 cask 'tableplus' # database gui
 cask 'tinkerwell'
 cask 'transmit'
+cask 'updf'
 cask 'visual-studio-code'
 cask 'warp' # terminal
 cask 'zoom'
