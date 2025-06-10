@@ -69,6 +69,7 @@ cask 'suspicious-package'
 
 # Fonts
 cask 'font-lato'
+cask 'font-merriweather'
 cask 'font-open-sans'
 cask 'font-poppins'
 cask 'font-roboto'
